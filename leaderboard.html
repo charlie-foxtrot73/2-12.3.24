@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="game.html">Game</a>
+        <a href="rules.html">Rules</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="index.html">Logout</a>
+    </nav>
+
+    <div id="leaderboard">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list"></ul>
+    </div>
+
+    <script>
+        const userRecords = JSON.parse(localStorage.getItem('userRecords')) || {};
+
+        const leaderboardList = document.getElementById('leaderboard-list');
+        for (const user in userRecords) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${user}: Best Level - ${userRecords[user]}`;
+            leaderboardList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

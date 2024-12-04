@@ -1,0 +1,110 @@
+body {
+    text-align: center;
+    background-color: #2e2e2e;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover, nav a.active {
+    background-color: #6b1313;
+    color: #fff;
+}
+
+#rules, #leaderboard {
+    margin-top: 50px;
+    text-align: left;
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#score {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#gameBoard { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto;
+}
+
+#startGame {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background-color: #6b1313;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#startGame:hover {
+    background-color: #f51800;
+}
+
+.colorButton {
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    border-radius: 15px;
+    opacity: 0.6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), inset 0 -3px 6px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.colorButton:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6), inset 0 -3px 8px rgba(255, 255, 255, 0.2);
+}
+
+.green {
+    background: linear-gradient(145deg, #32cd32, #228b22);
+}
+
+.red {
+    background: linear-gradient(145deg, #ff4500, #d92020);
+}
+
+.yellow {
+    background: linear-gradient(145deg, #ffd700, #f4c200);
+}
+
+.blue {
+    background: linear-gradient(145deg, #1e90ff, #1c86ee);
+}
